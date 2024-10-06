@@ -1,5 +1,6 @@
-#include ".../include/pencarian.h"
-
+#include "../include/pencarian.h"
+#include <iostream>
+using namespace std;
 
 int heuristik(Puzzle A, Puzzle B){
     int h;
@@ -47,30 +48,52 @@ void pindahkan_kotak(Kotak &k,int aturan_produksi){
         break;
     case 2:
         k.col -= 1;
+        break;
     case 3:
         k.row -= 1;
         break;
     }
 }
 
-void pencarian_heuristik(int solutions[N_SOLMAX],Puzzle A,Puzzle B){
+void pencarian_heuristik(int solutions[N_SOLMAX],int &n_solusi,Puzzle &A,Puzzle B){
     Puzzle P[4];
-    int aturan_produksi,h;
+    int ap_invers[] = {2,3,0,1};
+    int aturan_produksi,prev_ap,h;
     int H[4],F[4];
     Kotak kosong;
     get_row_col_kosong(A,kosong);
-    h = 0;
+    h = -1;
+    prev_ap = -1;
+    n_solusi = 0;
+    cout<<"Mencari solusi..."<<endl;
     for (size_t i = 0;i < N_SOLMAX & h != 9;i++){
         for (size_t j = 0;j < 4;j++){
-            F[j] = ap_master(P[j],j,kosong);
-            if (F[j] != -1){
-                H[0] = heuristik(P[j],B);
+            if (j != prev_ap){
+                //cout<<i<<". P["<<j<<"]"<<endl;
+                salin_puzzle(P[j],A);
+                //cetak_puzzle("ln",P[j]);
+                F[j] = j;
+                ap_master(P[j],F[j],kosong);
+                if (F[j] != -1 && j != prev_ap){
+                H[j] = heuristik(P[j],B);
+                }else{
+                H[j] = -1;
+                }
+                //cetak_puzzle("ln",P[j]);
             }else{
-                H[0] = -1;
+                H[j] = -1;
             }
         }
         heuristik_max(H,aturan_produksi,h);
         ap_master(A,aturan_produksi,kosong);
         pindahkan_kotak(kosong,aturan_produksi);
+        solutions[n_solusi] = aturan_produksi;
+        prev_ap = ap_invers[aturan_produksi];
+        n_solusi++;
+        cout<<"Iterasi ke "<<i<<" Dengan aturan produksi "<<aturan_produksi<<" Dan heuritik "<<h<<endl;
+        cetak_puzzle("ln",A);
     }
+    /*if (h != 9){
+        n_solusi = -1;
+    }*/
 }

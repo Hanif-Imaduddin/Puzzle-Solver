@@ -7,7 +7,7 @@ void ap_satu(Puzzle A,Kotak k); //Kotak kosong ke bawah
 void ap_dua(Puzzle A,Kotak k); //Kotak kosong ke kiri
 void ap_tiga(Puzzle A,Kotak k); //Kotak kosong ke atas
 
-void ap_master(Puzzle A,int flag,Kotak k);
+void ap_master(Puzzle A,int &flag,Kotak k);
 
 
 #endif // ATURAN_PRODUKSI_H_INCLUDED
