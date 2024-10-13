@@ -16,6 +16,28 @@ void salin_puzzle(Puzzle A,Puzzle B){
     }
 }
 
+string puzzle_to_string(Puzzle A){
+    string str;
+    str = "";
+    for (size_t i = 0;i < 3;i++){
+        for (size_t j = 0;j < 3;j++){
+            str += to_string(A[i][j]);
+        }
+    }
+    return str;
+}
+
+bool sama_dengan_puzzle(Puzzle A,Puzzle B){
+    for(size_t i = 0;i < 3;i++){
+        for (size_t j = 0;j<3;j++){
+            if (A[i][j] != B[i][j]){
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
 
 
 

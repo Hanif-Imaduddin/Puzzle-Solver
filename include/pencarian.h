@@ -1,17 +1,18 @@
 #ifndef PENCARIAN_H_INCLUDED
 #define PENCARIAN_H_INCLUDED
+
 #include "entity.h"
 #include "aturan_produksi.h"
 #include "operasi_dasar.h"
-
+#include "four_ary_tree.h"
 #include "tampilan.h"
 #include <iostream>
 
-int heuristik(Puzzle A, Puzzle B);
-void heuristik_max(int H[4],int &idx_max,int &h_max);
-void get_row_col_kosong(Puzzle A,Kotak &k);
-void pindahkan_kotak(Kotak &k);
-void pencarian_heuristik(int solutions[N_SOLMAX],int &n_solusi,Puzzle &A,Puzzle B);
+Kotak get_lokasi_kotak_kosong(Puzzle A);
+void geser_kotak_kosong(Kotak &k,int flag);
 
+void traverse(PuzzleTree,elmPuzzleTree*,Kotak,Puzzle,int*,int&,bool&);
+
+void cari_solusi(Puzzle IS, Puzzle GS);
 
 #endif // PENCARIAN_H_INCLUDED

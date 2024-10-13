@@ -2,42 +2,53 @@
 1728206044 source:d:\hanif imaduddin\github\puzzle solver\lib\aturan_produksi.cpp
 	"../include/aturan_produksi.h"
 
-1728135767 source:d:\hanif imaduddin\github\puzzle solver\lib\entity.cpp
+1728803782 source:d:\hanif imaduddin\github\puzzle solver\lib\entity.cpp
 
-1728208670 source:d:\hanif imaduddin\github\puzzle solver\lib\pencarian.cpp
+1728817757 source:d:\hanif imaduddin\github\puzzle solver\lib\pencarian.cpp
 	"../include/pencarian.h"
 	<iostream>
 
 1728205817 d:\hanif imaduddin\github\puzzle solver\include\aturan_produksi.h
 	"entity.h"
 
-1728138526 d:\hanif imaduddin\github\puzzle solver\include\entity.h
+1728818120 d:\hanif imaduddin\github\puzzle solver\include\entity.h
 
-1728204972 source:d:\hanif imaduddin\github\puzzle solver\lib\operasi_dasar.cpp
+1728805885 source:d:\hanif imaduddin\github\puzzle solver\lib\operasi_dasar.cpp
 	"../include/operasi_dasar.h"
 
-1728204967 d:\hanif imaduddin\github\puzzle solver\include\operasi_dasar.h
+1728787097 d:\hanif imaduddin\github\puzzle solver\include\operasi_dasar.h
 	"entity.h"
 	<iostream>
+	<string>
 
-1728203307 d:\hanif imaduddin\github\puzzle solver\include\pencarian.h
+1728810291 d:\hanif imaduddin\github\puzzle solver\include\pencarian.h
 	"entity.h"
 	"aturan_produksi.h"
 	"operasi_dasar.h"
+	"four_ary_tree.h"
 	"tampilan.h"
 	<iostream>
 
-1728203725 source:d:\hanif imaduddin\github\puzzle solver\lib\tampilan.cpp
+1728804135 source:d:\hanif imaduddin\github\puzzle solver\lib\tampilan.cpp
 	"../include/tampilan.h"
 
-1728196914 d:\hanif imaduddin\github\puzzle solver\include\tampilan.h
+1728804125 d:\hanif imaduddin\github\puzzle solver\include\tampilan.h
 	"entity.h"
 	<iostream>
 
-1728206468 source:d:\hanif imaduddin\github\puzzle solver\main.cpp
+1728818148 source:d:\hanif imaduddin\github\puzzle solver\main.cpp
 	<iostream>
 	"include/entity.h"
 	"include/operasi_dasar.h"
 	"include/tampilan.h"
 	"include/pencarian.h"
+
+1728804415 d:\hanif imaduddin\github\puzzle solver\include\four_ary_tree.h
+	"entity.h"
+	"operasi_dasar.h"
+
+1728804539 source:d:\hanif imaduddin\github\puzzle solver\entity\four_ary_tree.cpp
+	"../include/four_ary_tree.h"
+	"../include/operasi_dasar.h"
+	"../include/tampilan.h"
 

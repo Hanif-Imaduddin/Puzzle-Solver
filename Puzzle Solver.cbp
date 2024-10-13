@@ -32,12 +32,18 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="entity/four_ary_tree.cpp" />
 		<Unit filename="include/aturan_produksi.h" />
 		<Unit filename="include/entity.h" />
+		<Unit filename="include/four_ary_tree.h" />
+		<Unit filename="include/operasi_dasar.h" />
 		<Unit filename="include/pencarian.h" />
+		<Unit filename="include/tampilan.h" />
 		<Unit filename="lib/aturan_produksi.cpp" />
 		<Unit filename="lib/entity.cpp" />
+		<Unit filename="lib/operasi_dasar.cpp" />
 		<Unit filename="lib/pencarian.cpp" />
+		<Unit filename="lib/tampilan.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

@@ -7,8 +7,6 @@ using namespace std;
 
 void cetak_puzzle(string metode,Puzzle A);
 
-void cetak_solusi(string metode,int S[N_SOLMAX],int n_solusi);
-
 void cetak_aturan_produksi(string metode);
 
 void cetak_pilihan(string metode);
